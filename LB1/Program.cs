@@ -1,4 +1,5 @@
 ﻿using LB1;
+using System.Net.Security;
 
 class Program
 {
@@ -27,4 +28,22 @@ class Program
 
 
 
+}
+
+class Man
+{ 
+    public virtual void Print()
+    {
+        Console.WriteLine("HI");
+    }
+
+
+}
+
+class ultraman : Man
+{
+    public override void Print()
+    {
+        Console.WriteLine("He");
+    }
 }

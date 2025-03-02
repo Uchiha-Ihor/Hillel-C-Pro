@@ -19,6 +19,8 @@ namespace LB1
                 double num1 = ParseNumber(a, b);
                 double num2 = ParseNumber(b, a);
 
+                
+
                 switch (operation)
                 {
                     case "+":
