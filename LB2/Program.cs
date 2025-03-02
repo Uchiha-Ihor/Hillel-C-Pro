@@ -1,21 +1,57 @@
-﻿using LB2;
+﻿using LB2.Task_1;
+using LB2.Task_2;
 
 class Program
 {
-    static void Main()
+    // you can switch some task to OFF state
+    private bool Task1 = true;
+    private bool Task2 = true;
+    private bool Task3 = true;
+
+
+    void Main()
     {
-        Product Laptop = new Product();
+        // TASK 1
+        if (Task1)
+        {
+            Product Laptop = new Product("Laptop");
 
-        Laptop.Name = "Laptop";
+            Money money = Laptop;
 
-        Money money = Laptop;
+            money.PrintMoney();
 
-        money.PrintMoney();
+            Laptop.ReducePrice();
 
-        Laptop.ReducePrice();
+            //money.PrintMoney();
 
-        //money.PrintMoney();
+            Laptop.PrintProductProperty();
+        }
 
-        Laptop.PrintProductProperty();
+        // TASK 2
+        if (Task2)
+        {
+            MusicalInstrument[] instruments = {
+                new Violin(),
+                new Trombone(),
+                new Ukulele(),
+                new Cello()
+            };
+
+            foreach (var instr in instruments)
+            {
+                instr.Show();
+                instr.Sound();
+                instr.Desc();
+                instr.History();
+                Console.WriteLine();
+            }
+        }
+
+        // TASK 3
+        if (Task3)
+        {
+            
+        }
+
     }
 }

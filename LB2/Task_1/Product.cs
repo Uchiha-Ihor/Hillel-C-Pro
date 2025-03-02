@@ -1,16 +1,20 @@
-﻿// LB2 Task 1
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
-namespace LB2
+namespace LB2.Task_1
 {
     internal class Product : Money
     {
-        public string Name { get; set; }
+        private string Name { get; set; }
+
+        public Product(string _Name)
+        {
+            Name = _Name;
+        }
 
         public void ReducePrice()
         {
@@ -90,7 +94,7 @@ namespace LB2
 
                     return;
                 }
-                catch (Exception ex)  
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                 }

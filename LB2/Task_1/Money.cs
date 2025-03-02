@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LB2
+namespace LB2.Task_1
 {
     internal class Money
     {
-        public decimal dollars { get; set; }
-        public decimal euros { get; set; }
-        public decimal hryvnias { get; set; }
+        protected decimal dollars { get; set; }
+        protected decimal euros { get; set; }
+        protected decimal hryvnias { get; set; }
 
-        public decimal cents { get; set; }
-        public decimal euroCents { get; set; }
-        public decimal kopecks { get; set; }
+        protected decimal cents { get; set; }
+        protected decimal euroCents { get; set; }
+        protected decimal kopecks { get; set; }
 
-        public Money()
+        protected Money()
         {
             SetValue();
         }
@@ -88,7 +88,7 @@ namespace LB2
 
                     return;
                 }
-                catch (Exception ex)  
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
