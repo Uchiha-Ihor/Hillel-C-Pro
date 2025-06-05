@@ -1,0 +1,31 @@
+﻿@model IEnumerable<WebApplication1.Models.Note>
+@{
+    ViewData["Title"] = "Notes";
+}
+<h1>Notes</h1>
+<p>
+    @* <a asp-action="Create" class="btn btn-primary">Create New Note</a> *@
+    <a asp-action="Create" class="btn btn-primary">Create New Note</a>
+    @* <a href="/Notes/Create">Create New Note</a> *@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Created Date</th>
+            <th>Tags</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var note in Model)
+        {
+            <tr>
+                <td>@note.Title</td>
+                <td>@note.Content</td>
+                <td>@note.CreatedDate.ToString("g")</td>
+                <td>@string.Join(", ", note.Tags)</td>
+            </tr>
+        }
+    </tbody>
+</table>
